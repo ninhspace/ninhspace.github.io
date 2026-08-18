@@ -1094,8 +1094,10 @@
         document.getElementById('rsvp-name').focus();
         return;
       }
+      const message = document.getElementById('rsvp-message').value.trim();
+      const note = 'Sẽ tham dự' + (message ? ' — ' + message : '');
       showClosing(true, name);
-      sendToGoogleForm({ [ENTRY_NAME]: name, [ENTRY_NOTE]: 'Sẽ tham dự' });
+      sendToGoogleForm({ [ENTRY_NAME]: name, [ENTRY_NOTE]: note });
     } else {
       sendToGoogleForm({ [ENTRY_NAME]: 'Ẩn danh', [ENTRY_NOTE]: 'Không thể tham dự' });
       showClosing(false);
