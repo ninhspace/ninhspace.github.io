@@ -1059,13 +1059,11 @@
   if(reduceMotion){particleHost.style.display='none';sparkleHost.style.display='none';}
 
   /* ===== RSVP flow =====
-     GOOGLE_FORM_ID and the three ENTRY ids below need to be filled in
-     once you send over the pre-filled link from your Google Form —
-     until then, submissions just show the thank-you locally without
-     being recorded anywhere. */
-  const GOOGLE_FORM_ID = ""; // e.g. "1FAIpQLSf..."
-  const ENTRY_NAME = "";     // e.g. "entry.123456789"
-  const ENTRY_NOTE = "";     // e.g. "entry.555555555" (used for "not coming")
+     Submissions post to the "Tốt nghiệp_Ninh" Google Form and land in its
+     linked Google Sheet. */
+  const GOOGLE_FORM_ID = "1FAIpQLScvKDEx3nErNccPiVfan3Vg2oPhenzjEuJzXvoE34_eLAXrZw";
+  const ENTRY_NAME = "entry.1982981806"; // "Tên"
+  const ENTRY_NOTE = "entry.410674884";  // "Ghi chú"
 
   function showRsvpForm() {
     document.getElementById('rsvp-buttons').style.display = 'none';
