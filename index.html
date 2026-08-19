@@ -839,7 +839,7 @@
 /* V7.7 — deeper cinematic atmosphere + defined light crossing */
 .stage{background:radial-gradient(ellipse 54% 78% at 67% 45%,rgba(42,72,128,.24),transparent 72%),radial-gradient(ellipse 38% 54% at 55% 56%,rgba(30,50,96,.18),transparent 76%),radial-gradient(ellipse 26% 36% at 80% 22%,rgba(232,201,144,.06),transparent 74%),linear-gradient(112deg,#06070c 0%,#0a0810 48%,#120b1a 100%)}
 .stage::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 38% 65% at 42% 48%,transparent 35%,rgba(0,0,0,.22) 72%,rgba(0,0,0,.46) 100%);mix-blend-mode:multiply}
-.depth-bloom{position:absolute;z-index:2;left:39%;top:18%;width:57%;height:66%;pointer-events:none;filter:blur(25px);background:radial-gradient(ellipse 48% 35% at 25% 46%,rgba(246,239,220,.11),transparent 70%),radial-gradient(ellipse 48% 42% at 57% 50%,rgba(232,201,144,.09),transparent 73%),radial-gradient(ellipse 45% 55% at 78% 44%,rgba(34,58,104,.18),transparent 76%);animation:deep-breathe 15s ease-in-out infinite alternate}
+.depth-bloom{position:absolute;z-index:2;left:39%;top:18%;width:57%;height:66%;pointer-events:none;filter:blur(18px);background:radial-gradient(ellipse 48% 35% at 25% 46%,rgba(246,239,220,.11),transparent 70%),radial-gradient(ellipse 48% 42% at 57% 50%,rgba(232,201,144,.09),transparent 73%),radial-gradient(ellipse 45% 55% at 78% 44%,rgba(34,58,104,.18),transparent 76%);animation:deep-breathe 15s ease-in-out infinite alternate}
 @keyframes deep-breathe{from{opacity:.55;transform:translate3d(-2px,2px,0) scale(.98)}to{opacity:.9;transform:translate3d(4px,-2px,0) scale(1.025)}}
 .depth-bokeh{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden}
 .depth-bokeh::before,.depth-bokeh::after{content:"";position:absolute;border-radius:50%;background:rgba(239,215,173,.8);filter:blur(5px);box-shadow:0 0 24px 7px rgba(232,201,144,.18);animation:bokeh-float 11s ease-in-out infinite alternate}
@@ -858,17 +858,11 @@
 @media(prefers-reduced-motion:reduce){.depth-bloom,.depth-bokeh,.light-crossing{animation:none!important}.portrait-frame::after{display:none}}
 
 /* V7.9 — luxury cinematic purple depth: the right side reads as a room with air in it, not a flat tint */
-.sapphire-haze{position:absolute;z-index:2;inset:-10%;pointer-events:none;background:radial-gradient(ellipse 46% 60% at 66% 46%,rgba(54,90,156,.20),transparent 74%),radial-gradient(ellipse 34% 46% at 55% 62%,rgba(36,60,108,.14),transparent 76%);filter:blur(46px);animation:haze-breathe 19s ease-in-out infinite alternate;will-change:transform,opacity}
+.sapphire-haze{position:absolute;z-index:2;inset:-10%;pointer-events:none;background:radial-gradient(ellipse 46% 60% at 66% 46%,rgba(54,90,156,.20),transparent 74%),radial-gradient(ellipse 34% 46% at 55% 62%,rgba(36,60,108,.14),transparent 76%);filter:blur(28px);animation:haze-breathe 19s ease-in-out infinite alternate;will-change:transform,opacity}
 @keyframes haze-breathe{from{transform:translate3d(-4px,3px,0) scale(1.02);opacity:.74}to{transform:translate3d(5px,-4px,0) scale(1.07);opacity:1}}
 
-.sapphire-bloom-wide{position:absolute;z-index:2;left:40%;top:20%;width:62%;height:62%;pointer-events:none;background:radial-gradient(ellipse 55% 48% at 42% 46%,rgba(80,120,190,.16),rgba(46,78,138,.08) 48%,transparent 76%);filter:blur(58px);animation:bloom-wide-drift 24s ease-in-out infinite alternate;will-change:transform,opacity}
-@keyframes bloom-wide-drift{from{transform:translate3d(-8px,5px,0) scale(0.98);opacity:.7}to{transform:translate3d(9px,-6px,0) scale(1.06);opacity:1}}
-
-.sapphire-fog{position:absolute;z-index:2;inset:-20% -30%;pointer-events:none;opacity:.55;background:linear-gradient(100deg,transparent 0%,rgba(70,105,175,.05) 30%,rgba(100,145,205,.08) 48%,rgba(70,105,175,.05) 66%,transparent 100%);filter:blur(30px);animation:fog-drift 46s linear infinite;mix-blend-mode:screen}
-@keyframes fog-drift{0%{transform:translate3d(-6%,0,0)}50%{transform:translate3d(6%,-2%,0)}100%{transform:translate3d(-6%,0,0)}}
-
 /* the "wow" — an almost-imperceptible ring of light behind the mist; only hover lets it show it's alive */
-.sapphire-halo{position:absolute;z-index:2;left:46%;top:8%;width:62%;height:78%;pointer-events:none;opacity:.16;background:radial-gradient(circle at 50% 50%,transparent 0%,transparent 38%,rgba(108,150,214,.10) 46%,rgba(108,150,214,.04) 54%,transparent 64%);filter:blur(22px);transform:scale(1) translate3d(0,0,0);animation:halo-drift 34s ease-in-out infinite alternate;transition:opacity 2.4s ease,transform 2.4s ease;will-change:transform,opacity}
+.sapphire-halo{position:absolute;z-index:2;left:46%;top:8%;width:62%;height:78%;pointer-events:none;opacity:.16;background:radial-gradient(circle at 50% 50%,transparent 0%,transparent 38%,rgba(108,150,214,.10) 46%,rgba(108,150,214,.04) 54%,transparent 64%);filter:blur(16px);transform:scale(1) translate3d(0,0,0);animation:halo-drift 34s ease-in-out infinite alternate;transition:opacity 2.4s ease,transform 2.4s ease;will-change:transform,opacity}
 @keyframes halo-drift{from{transform:translate3d(-2%,1%,0) scale(0.97)}to{transform:translate3d(2%,-1.5%,0) scale(1.04)}}
 .portrait-frame:hover ~ .sapphire-halo{opacity:.26;transform:scale(1.05)}
 
@@ -877,8 +871,7 @@
 .portrait-frame:hover::after{animation-duration:2.6s}
 
 @media (max-width: 860px){
-  .sapphire-haze,.sapphire-bloom-wide,.sapphire-fog,.sapphire-halo{position:fixed}
-  .sapphire-fog{opacity:.35}
+  .sapphire-haze,.sapphire-halo{position:fixed}
   .sapphire-halo{opacity:.12}
 }
 </style>
@@ -895,8 +888,6 @@
   <div class="bg-portrait"></div>
   <div class="bg-portrait-tint"></div>
   <div class="sapphire-haze" aria-hidden="true"></div>
-  <div class="sapphire-bloom-wide" aria-hidden="true"></div>
-  <div class="sapphire-fog" aria-hidden="true"></div>
   <div class="light-flow-glow" aria-hidden="true"></div>
   <div class="depth-bloom" aria-hidden="true"></div>
   <div class="light-crossing" aria-hidden="true"></div>
@@ -1050,7 +1041,7 @@
   });
 
   /* V7.5 atmosphere — 14 particles + 5 star glints */
-  const particleHost=document.getElementById('particles'); const PARTICLE_COUNT=14;
+  const particleHost=document.getElementById('particles'); const PARTICLE_COUNT=8;
   for(let i=0;i<PARTICLE_COUNT;i++){const p=document.createElement('div');p.className=i%5===0?'particle sapphire':'particle';p.style.left=(43+Math.random()*38)+'%';p.style.bottom=(-8-Math.random()*12)+'%';const size=1.7+Math.random()*2.1;p.style.width=size+'px';p.style.height=size+'px';p.style.setProperty('--particle-opacity',(0.38+Math.random()*0.38).toFixed(2));p.style.setProperty('--drift-x',((Math.random()-.5)*95).toFixed(1)+'px');const dur=13+Math.random()*9;p.style.animationDuration=dur+'s';p.style.animationDelay=(-Math.random()*dur)+'s';particleHost.appendChild(p)}
   /* V7.8 foreground bokeh — larger, softer points sit on a separate depth plane. */
   for(let i=0;i<4;i++){const b=document.createElement('span');b.className='depth-bokeh';b.style.left=(58+Math.random()*30)+'%';b.style.top=(24+Math.random()*54)+'%';b.style.setProperty('--bokeh-size',(10+Math.random()*16)+'px');b.style.animationDelay=(-Math.random()*8)+'s';document.getElementById('sparkles').appendChild(b)}
